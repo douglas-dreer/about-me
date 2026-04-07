@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada — Douglas Dreer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #04040f;
+      color: #c4cfe0;
+      font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-content { max-width: 460px; }
+
+    .error-code {
+      font-size: clamp(4rem, 12vw, 7rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #a78bfa, #f59e0b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.05em;
+    }
+
+    .error-title {
+      font-size: 1.4rem;
+      color: #f0f4ff;
+      font-weight: 700;
+      margin: 0.6rem 0 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .error-desc {
+      font-size: 0.95rem;
+      color: #5a6a80;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .error-link {
+      display: inline-block;
+      background: #f59e0b;
+      color: #04040f;
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 0.65rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+    }
+
+    .error-link:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 32px rgba(245, 158, 11, 0.22);
+    }
+
+    .error-decoration {
+      margin-top: 2.5rem;
+      font-size: 0.75rem;
+      color: #5a6a80;
+      font-style: italic;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Página não encontrada</h1>
+    <p class="error-desc">A página que você procura não existe ou foi removida.</p>
+    <a href="/" class="error-link">Voltar para a Home</a>
+    <p class="error-decoration">// Na minha máquina funciona...</p>
+  </div>
+</body>
+
+</html>

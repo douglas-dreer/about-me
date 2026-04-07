@@ -1,0 +1,819 @@
+<!doctype html>
+<html class="no-js" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Douglas Dreer — Desenvolvedor Sênior</title>
+  <meta name="description" content="Portfolio de Douglas Dreer — Desenvolvedor Sênior com mais de 10 anos de experiência em backend Java, Kotlin, Spring Boot e Microsserviços.">
+
+  <meta property="og:title" content="Douglas Dreer — Desenvolvedor Sênior">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://douglasdreer.gitlab.io/">
+  <meta property="og:image" content="./asserts/img/logo.webp">
+  <meta property="og:image:alt" content="Douglas Dreer - Desenvolvedor">
+
+  <link rel="icon" href="./asserts/img/logo.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="./asserts/img/logo.webp">
+  <meta name="theme-color" content="#0a0a1a">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <img src="./asserts/img/logo.webp" alt="DD Logo">
+        <span class="brand-text">Douglas Dreer</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+        <i class="bi bi-x d-none"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-orange" href="#contato">Fale Comigo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section id="hero" class="hero-section d-flex align-items-center">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-particles" aria-hidden="true">
+      <span class="particle particle-1"></span>
+      <span class="particle particle-2"></span>
+      <span class="particle particle-3"></span>
+      <span class="particle particle-4"></span>
+      <span class="particle particle-5"></span>
+      <span class="particle particle-6"></span>
+    </div>
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center flex-lg-row-reverse gy-5">
+        <div class="col-lg-6 text-center mb-lg-0">
+          <p class="hero-subtitle mb-2">
+            <span id="typedText"></span><i class="bi bi-chevron-right"></i>
+          </p>
+          <h1 class="hero-title fw-bold mb-3">
+            <span class="d-block" style="font-size: 0.48em; font-weight: 400; letter-spacing: 0.06em; opacity: 0.55; margin-bottom: 0.4rem; font-family: var(--mono); color: var(--txt-m);">// desenvolvedor sênior</span>
+            <span class="hero-name">Douglas Dreer</span>
+          </h1>
+          <p class="hero-description mx-auto mx-lg-0" style="max-width: 520px;">
+            Especialista em <strong style="color: var(--txt-h);">backend Java &amp; Kotlin</strong>
+            com mais de <strong style="color: var(--txt-h);">10 anos de experiência</strong> em sistemas escaláveis,
+            microsserviços e arquitetura de alta performance.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4 ">
+            <a href="#skills" class="btn btn-orange btn-lg">Ver Skills</a>
+            <a href="./asserts/curriculo-douglas-dreer.pdf" download target="_blank" class="btn btn-glow" aria-label="Baixar currículo em PDF">
+              <i class="bi bi-download me-1"></i>
+              <span class="btn-label">Baixar CV</span>
+            </a>
+            <button type="button" id="verProjetos" class="btn btn-glow" aria-label="Ver Projetos" data-bs-toggle="modal" data-bs-target="#modalProjetos">
+              <i class="bi bi-folder2-open me-1"></i>
+              <span class="btn-label">Ver projetos</span>
+            </button>
+          </div>
+          <div class="hero-socials mt-4 d-flex align-items-center gap-3">
+            <a href="https://gitlab.com/douglasdreer" class="btn btn-glass" target="_blank" rel="noopener" aria-label="GitLab">
+              <i class="bi bi-gitlab fs-5"></i>
+            </a>
+            <a href="https://linkedin.com/in/douglas-dreer" class="btn btn-glass" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="bi bi-linkedin fs-5"></i>
+            </a>
+            <a href="mailto:douglasdreer@gmail.com.br" class="btn btn-glass" aria-label="Email">
+              <i class="bi bi-envelope-fill fs-5"></i>
+            </a>
+            <span style="width: 1px; height: 22px; background: rgba(255,255,255,0.08); display: inline-block;"></span>
+            <span style="font-size: 0.73rem; color: var(--clr-text-muted); font-family: var(--mono);">Londrina, PR</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-logo-wrapper mx-auto">
+            <div class="hero-logo-glow"></div>
+            <img src="./asserts/img/logo.webp"
+                 alt="Douglas Dreer" class="hero-logo" loading="eager">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SOBRE ======== -->
+  <section id="sobre" class="section sobre-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-badge">Sobre Mim</span>
+        <h2 class="section-title">Conheça minha trajetória</h2>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center">
+          <div class="about-image-wrapper">
+            <img src="./asserts/img/logo.webp" alt="Douglas Dreer" class="about-image"
+                 alt="Workspace Douglas Dreer" class="about-image" loading="lazy">
+          </div>
+          <div class="experience-badge mt-3">
+            <span class="fs-1 fw-bold text-orange d-block">+10</span>
+            <small class="text-white">Anos de experiência</small>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <p class="lead" style="color: var(--clr-text-muted);">
+            Desenvolvedor Sênior com mais de 10 anos de experiência em backend, especialista em Java,
+            Spring Boot, SQL, arquitetura SOA e microsserviços.
+          </p>
+          <p style="color: var(--clr-text-muted);">
+            Atuo atualmente na <strong class="text-white">EngeSoft (Projeto Caixa — SIREX)</strong>, liderando a migração tecnológica de <strong class="text-white">jBoss para Quarkus</strong> e desenvolvendo a API sirex-agenda-api. Tenho ampla experiência em modernização de sistemas legacy e migração para arquiteturas de microsserviços.
+          </p>
+          <p style="color: var(--clr-text-muted);">
+            Minha jornada inclui passagens por <strong class="text-white">Picpay</strong>,
+            <strong class="text-white">ACT Digital</strong>,
+            <strong class="text-white">Stefanini</strong>,
+            <strong class="text-white">GlobalWeb</strong> e
+            <strong class="text-white">Atos S/A</strong>
+            — sempre com foco em construir
+            soluções robustas, performáticas e com qualidade de código.
+          </p>
+          <ul class="about-highlights list-unstyled d-flex flex-wrap gap-2 mt-4">
+            <li class="highlight-item"><i class="bi bi-geo-alt-fill text-orange me-1"></i> Londrina/PR</li>
+            <li class="highlight-item"><i class="bi bi-mortarboard-fill text-orange me-1"></i> ADS — FACCAR (2011)</li>
+            <li class="highlight-item"><i class="bi bi-translate text-orange me-1"></i> Português — Inglês Intermediário</li>
+          </ul>
+          <a href="#contato" class="btn btn-orange mt-4">Vamos conversar <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS ======== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-badge">Skills</span>
+        <h2 class="section-title">Tecnologias e Competências</h2>
+      </div>
+
+      <!-- Avançado / Especialista -->
+      <h4 class="skills-subheading text-center mb-3">
+        <span class="section-badge">Avançado / Especialista</span>
+        Linguagens &amp; Backend
+      </h4>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-filetype-java fs-3"></i></div>
+            <h5 class="card-title text-white">Linguagens</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Linguagem principal com +10 anos de experiência em sistemas enterprise.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-hdd-stack-fill fs-3"></i></div>
+            <h5 class="card-title text-white">Backend &amp; App Server</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Frameworks e servidores para construção e execução de APIs robustas.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Hibernate</span>
+              <span class="skill-tag">JPA</span>
+              <span class="skill-tag">jBoss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-database fs-3"></i></div>
+            <h5 class="card-title text-white">Bancos de Dados</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Modelagem, otimização de queries e administração de bancos relacionais.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Oracle</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">PostGIS</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-diagram-3 fs-3"></i></div>
+            <h5 class="card-title text-white">Arquitetura &amp; Conceitos</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Design de sistemas escaláveis com foco em manutenibilidade e engenharia sólida.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Microsserviços</span>
+              <span class="skill-tag">SOA</span>
+              <span class="skill-tag">MVC</span>
+              <span class="skill-tag">DDD</span>
+              <span class="skill-tag">Hexagonal</span>
+              <span class="skill-tag">Clean Code</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testes & Qualidade -->
+      <h4 class="skills-subheading text-center mb-3">
+        <span class="section-badge lvl-cyan">Testes &amp; Qualidade</span>
+      </h4>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-shield-check fs-3"></i></div>
+            <h5 class="card-title text-white">Testes Automated</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Testes unitários e de integração para garantir confiabilidade do código.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">JUnit</span>
+              <span class="skill-tag">Mockito</span>
+              <span class="skill-tag">TestContainers</span>
+              <span class="skill-tag">Testes de Integração</span>
+              <span class="skill-tag">Mock</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-clipboard2-check fs-3"></i></div>
+            <h5 class="card-title text-white">Qualidade de Código</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Análise estática e garantia de aderência a padrões de engenharia.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">SonarQube</span>
+              <span class="skill-tag">Code Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intermediário -->
+      <h4 class="skills-subheading text-center mb-3">
+        <span class="section-badge lvl-cyan">Intermediário</span>
+        DevOps &amp; Front-End
+      </h4>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-cloud-arrow-up fs-3"></i></div>
+            <h5 class="card-title text-white">DevOps &amp; Cloud</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Containerização, CI/CD e ambientes cloud para deploy contínuo.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">ArgoCD</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Azure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-code-square fs-3"></i></div>
+            <h5 class="card-title text-white">Ferramentas</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Versionamento, build automation e gestão de dependências.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Maven</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-browser-chrome fs-3"></i></div>
+            <h5 class="card-title text-white">Front-End</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Interfaces web e frameworks SPA para integração com APIs.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">jQuery</span>
+              <span class="skill-tag">NextJS</span>
+              <span class="skill-tag">Angular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Básico -->
+      <h4 class="skills-subheading text-center mb-3">
+        <span class="section-badge lvl-green">Conhecimento</span>
+        Frameworks &amp; Orquestração
+      </h4>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-cpu fs-3"></i></div>
+            <h5 class="card-title text-white">Framework &amp; Linguagem</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Framework moderno Java e linguagem alternativa para backend.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Quarkus</span>
+              <span class="skill-tag">Kotlin</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-broadcast-pin fs-3"></i></div>
+            <h5 class="card-title text-white">Mensageria &amp; Orquestração</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Processamento assíncrono e orquestração de containers distribuídos.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Kafka</span>
+              <span class="skill-tag">Kubernetes</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-3 fade-in">
+          <div class="skill-card h-100">
+            <div class="skill-icon"><i class="bi bi-database-x fs-3"></i></div>
+            <h5 class="card-title text-white">NoSQL &amp; BI</h5>
+            <p class="card-text" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+              Bancos não-relacionais e ferramentas de visualização de dados.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">MetaBase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIÊNCIA ======== -->
+  <section id="experiencia" class="section experiencia-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-badge">Trajetória</span>
+        <h2 class="section-title">Experiência Profissional</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="timeline">
+
+            <!-- EngeSoft -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h5 class="text-white mb-1">Desenvolvedor Sênior <span class="badge bg-primary ms-2" style="font-size: 0.75rem;">Projeto Caixa</span></h5>
+                    <p class="text-orange mb-0">EngeSoft — SIREX</p>
+                  </div>
+                  <span class="timeline-date">Jan 2026 — Atual</span>
+                </div>
+                <ul class="timeline-list">
+                  <li>Responsável pela migração tecnológica de <strong>jBoss → Quarkus</strong>.</li>
+                  <li>Desenvolvedor líder da API <strong>sirex-agenda-api</strong>.</li>
+                  <li>Definição de padrões técnicos e arquitetura do projeto.</li>
+                  <li>Implementação e padronização de testes automatizados (unitários e integração).</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                  <span class="skill-tag">Quarkus</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">jBoss</span>
+                  <span class="skill-tag">Testes Automatizados</span>
+                  <span class="skill-tag">Maven</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Picpay -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h5 class="text-white mb-1">Desenvolvedor Sênior <span class="badge bg-primary ms-2" style="font-size: 0.75rem;">Remoto</span></h5>
+                    <p class="text-orange mb-0">Picpay</p>
+                  </div>
+                  <span class="timeline-date">Jul 2025 — Jan 2026</span>
+                </div>
+                <ul class="timeline-list">
+                  <li>Desenvolvimento e manutenção de microsserviços para plataforma de Crédito e Recebíveis.</li>
+                  <li>Atuação em módulos de gestão de contrato, agendamento e opt-in de clientes.</li>
+                  <li>Implementação de funcionalidades para produtos financeiros com conformidade regulatória.</li>
+                  <li>Colaboração em decisões de arquitetura promovendo escalabilidade e manutenibilidade.</li>
+                  <li>Participação ativa em code reviews aplicando Clean Code e boas práticas.</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                  <span class="skill-tag">Kotlin</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">Kubernetes</span>
+                  <span class="skill-tag">ArgoCD</span>
+                  <span class="skill-tag">Kafka</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">AWS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consultor PJ -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+                  <div>
+                    <h5 class="text-white mb-1">Consultor / Desenvolvedor Java Sênior <span class="badge bg-secondary ms-2" style="font-size: 0.75rem;">PJ</span></h5>
+                    <p class="text-orange mb-0">Múltiplos Clientes</p>
+                  </div>
+                  <span class="timeline-date">Fev 2022 — Jan 2025</span>
+                </div>
+
+                <div class="sub-client-item mb-3 p-3 rounded" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--clr-primary);">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <strong class="text-white" style="font-size: 0.9rem;">GlobalWeb — Alocado no FIES</strong>
+                    <span class="timeline-date" style="font-size: 0.75rem;">Jun 2022 — Jan 2025</span>
+                  </div>
+                  <p class="mb-0 mt-1" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+                    Manutenção e evolução de sistemas legados (Java, jBoss, Oracle) para o FIES.
+                  </p>
+                </div>
+
+                <div class="sub-client-item mb-3 p-3 rounded" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--clr-cyan);">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <strong class="text-white" style="font-size: 0.9rem;">ACT Digital — Alocado no Sicoob</strong>
+                    <span class="timeline-date" style="font-size: 0.75rem;">Fev 2022 — Fev 2023</span>
+                  </div>
+                  <p class="mb-0 mt-1" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+                    Implementação de processamento assíncrono com Kafka e desenvolvimento de microsserviços com Java e Spring Boot.
+                  </p>
+                </div>
+
+                <div class="sub-client-item p-3 rounded" style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--clr-orange);">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <strong class="text-white" style="font-size: 0.9rem;">Stefanini — Alocado na Cielo</strong>
+                    <span class="timeline-date" style="font-size: 0.75rem;">Mar 2022 — Set 2022</span>
+                  </div>
+                  <p class="mb-0 mt-1" style="color: var(--clr-text-muted); font-size: 0.85rem;">
+                    Desenvolvimento de microsserviços (Spring Boot) para o projeto "Estruturante Cadastro" da Cielo.
+                  </p>
+                </div>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">Kafka</span>
+                  <span class="skill-tag">jBoss</span>
+                  <span class="skill-tag">Oracle</span>
+                  <span class="skill-tag">Microsserviços</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atos -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h5 class="text-white mb-1">Desenvolvedor Java Pleno / Sênior</h5>
+                    <p class="text-orange mb-0">Atos S/A — Londrina/PR</p>
+                  </div>
+                  <span class="timeline-date">Fev 2017 — Mai 2020</span>
+                </div>
+                <ul class="timeline-list">
+                  <li>Liderança na modernização de sistemas internos migrando para Spring Boot.</li>
+                  <li>Implementação de cultura de qualidade com JUnit e SonarQube.</li>
+                  <li>Migração de projetos para Java 11 com aplicação de Clean Code.</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">JUnit</span>
+                  <span class="skill-tag">SonarQube</span>
+                  <span class="skill-tag">Clean Code</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- DRZ -->
+            <div class="timeline-item fade-in">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content p-4">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h5 class="text-white mb-1">Desenvolvedor Java JR</h5>
+                    <p class="text-orange mb-0">DRZ — Londrina/PR</p>
+                  </div>
+                  <span class="timeline-date">Jan 2015 — Jan 2017</span>
+                </div>
+                <ul class="timeline-list">
+                  <li>Manutenção de sistemas Java e desenvolvimento de interfaces com jQuery, HTML e CSS.</li>
+                  <li>Implementação de funcionalidades de geoprocessamento com PostGIS.</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">jQuery</span>
+                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">PostGIS</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTATO ======== -->
+  <section id="contato" class="section contato-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-badge">Contato</span>
+        <h2 class="section-title">Vamos construir algo juntos?</h2>
+      </div>
+      <div class="row g-5 justify-content-center">
+        <div class="col-lg-5">
+          <h4 class="text-white mb-3">Informações de Contato</h4>
+          <p style="color: var(--clr-text-muted);">
+            Estou disponível para novos projetos, colaborações ou trocas de conhecimento. Não hesite em entrar em contato!
+          </p>
+          <ul class="contact-info list-unstyled mt-4">
+            <li class="d-flex align-items-start gap-3 mb-3">
+              <span class="contact-icon"><i class="bi bi-envelope-fill"></i></span>
+              <div>
+                <small class="text-uppercase" style="color: var(--clr-text-muted); font-size: 0.7rem; letter-spacing: 1px;">Email</small>
+                <p class="text-white mb-0">
+                  <a href="mailto:douglasdreer@gmail.com" style="color: inherit; text-decoration: none;">douglasdreer@gmail.com</a>
+                </p>
+              </div>
+            </li>
+            <li class="d-flex align-items-start gap-3 mb-3">
+              <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
+              <div>
+                <small class="text-uppercase" style="color: var(--clr-text-muted); font-size: 0.7rem; letter-spacing: 1px;">WhatsApp</small>
+                <p class="text-white mb-0">
+                  <a href="https://wa.me/5543996490584" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">(43) 99649-0584</a>
+                </p>
+              </div>
+            </li>
+            <li class="d-flex align-items-start gap-3 mb-3">
+              <span class="contact-icon"><i class="bi bi-geo-alt-fill"></i></span>
+              <div>
+                <small class="text-uppercase" style="color: var(--clr-text-muted); font-size: 0.7rem; letter-spacing: 1px;">Localização</small>
+                <p class="text-white mb-0">Londrina/PR, Brasil</p>
+              </div>
+            </li>
+          </ul>
+          <div class="d-flex gap-2 mt-4">
+            <a href="https://gitlab.com/douglas-dreer" class="btn btn-glass btn-social" target="_blank" rel="noopener" aria-label="GitLab">
+              <i class="bi bi-gitlab fs-5"></i>
+            </a>
+            <a href="https://linkedin.com/in/douglas-dreer" class="btn btn-glass btn-social" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="bi bi-linkedin fs-5"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form id="contactForm" class="contact-form p-4 rounded" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="contactName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="contactName" name="name" required placeholder="Seu nome completo">
+                <div class="invalid-feedback">Por favor, informe seu nome.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="contactEmail" name="email" required placeholder="seu@email.com">
+                <div class="invalid-feedback">Informe um email válido.</div>
+              </div>
+              <div class="col-12">
+                <label for="contactSubject" class="form-label">Assunto</label>
+                <input type="text" class="form-control" id="contactSubject" name="subject" required placeholder="Qual o motivo do contato?">
+                <div class="invalid-feedback">Informe o assunto.</div>
+              </div>
+              <div class="col-12">
+                <label for="contactMessage" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="5" required placeholder="Detalhe sua mensagem..."></textarea>
+                <div class="invalid-feedback">Escreva sua mensagem.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-orange btn-lg w-100">
+                  <i class="bi bi-send me-2"></i>Enviar Mensagem
+                </button>
+              </div>
+            </div>
+            <div id="formFeedback" class="form-text text-center mt-3" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4 text-center text-md-start">
+          <a href="#hero" class="text-decoration-none">
+            <img src="./asserts/img/logo.webp" alt="DD" height="28" class="me-1">
+            <span class="text-white fw-semibold">Douglas Dreer</span>
+          </a>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="text-white mb-0 small">
+            &copy; <span id="footerYear"></span> Douglas Dreer. Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="col-md-4 text-center text-md-end d-flex justify-content-md-end gap-3">
+          <a href="#sobre" class="footer-link" style="color: var(--clr-text-muted); text-decoration: none;">Sobre</a>
+          <a href="#skills" class="footer-link" style="color: var(--clr-text-muted); text-decoration: none;">Skills</a>
+          <a href="#experiencia" class="footer-link" style="color: var(--clr-text-muted); text-decoration: none;">Experiência</a>
+          <a href="#contato" class="footer-link" style="color: var(--clr-text-muted); text-decoration: none;">Contato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== BACK TO TOP ======== -->
+  <button id="backToTop" class="btn btn-back-to-top" type="button" aria-label="Voltar ao topo">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- ======== THEME TOGGLE ======== -->
+  <button id="themeToggle" class="btn btn-glass" type="button" aria-label="Alternar tema claro/escuro">
+    <i class="bi bi-sun-fill" id="themeIcon"></i>
+  </button>
+
+  <!-- ======== CV LOADING MODAL ======== -->
+  <div id="cvLoadingModal" class="cv-loading-modal" aria-hidden="true">
+    <div class="cv-loading-box">
+      <div class="cv-spinner"></div>
+      <p class="cv-loading-title">Gerando seu currículo...</p>
+      <p class="cv-loading-sub">Convertendo para PDF, aguarde um momento.</p>
+    </div>
+  </div>
+
+  <!-- ======== HIDDEN CV CONTENT FOR PDF ======== -->
+  <div id="cv-pdf-content" aria-hidden="true"></div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/generate-pdf.js"></script>
+  <script src="js/app.js"></script>
+
+  <div class="modal fade projects-modal" id="modalProjetos" tabindex="-1" aria-labelledby="modalProjetosTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <span class="section-badge mb-2">Projetos</span>
+            <span class="section-badge mb-2 alert-danger">Em Desenvolvimento</span>
+            <h3 class="modal-title h4 mb-0" id="modalProjetosTitulo">Laboratório de Estudos e Homebrews</h3>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body pt-0">
+          <p class="projects-modal-intro mb-4">
+            Projetos demonstrativos e experimentais usados para praticar arquitetura, observabilidade e padrões de backend.
+            O conteúdo atual é apenas um placeholder para o futuro.
+          </p>
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">Nexus Billing API</h5>
+                <p class="mb-3">API de faturamento com eventos assíncronos, retries e trilha de auditoria.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">Java 21</span><span class="skill-tag">Spring Boot</span><span class="skill-tag">Kafka</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">HexaBank Core</h5>
+                <p class="mb-3">Core bancário modular com arquitetura hexagonal e contratos versionados.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">Kotlin</span><span class="skill-tag">Hexagonal</span><span class="skill-tag">PostgreSQL</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">GeoRoute Intelligence</h5>
+                <p class="mb-3">Motor de rotas com geocodificação, cache e cálculo de janela de entrega.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">PostGIS</span><span class="skill-tag">Redis</span><span class="skill-tag">Docker</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">Legacy to Quarkus Lab</h5>
+                <p class="mb-3">Estudo de migração de monolito jBoss para serviços leves em Quarkus.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">Quarkus</span><span class="skill-tag">jBoss</span><span class="skill-tag">Clean Code</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">SRE Insights Dashboard</h5>
+                <p class="mb-3">Dashboard de saúde de APIs com métricas, logs correlacionados e SLO.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">Grafana</span><span class="skill-tag">OpenTelemetry</span><span class="skill-tag">Prometheus</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">Contract Test Playground</h5>
+                <p class="mb-3">Ambiente para testes de contrato entre consumidores e provedores de APIs.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">JUnit</span><span class="skill-tag">TestContainers</span><span class="skill-tag">CI/CD</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">Event Sourcing POC</h5>
+                <p class="mb-3">Prova de conceito com snapshots, rebuild de estado e idempotência.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">EventStore</span><span class="skill-tag">DDD</span><span class="skill-tag">Microsserviços</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">API Security Sandbox</h5>
+                <p class="mb-3">Sandbox de autenticação, autorização e rate limiting para APIs REST.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">OAuth2</span><span class="skill-tag">JWT</span><span class="skill-tag">Spring Security</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <article class="project-placeholder-card h-100">
+                <h5 class="mb-2">Dev Productivity Toolkit</h5>
+                <p class="mb-3">Kit de automações para pipelines, quality gate e padronização de projetos.</p>
+                <div class="project-tags">
+                  <span class="skill-tag">GitLab CI</span><span class="skill-tag">Sonar</span><span class="skill-tag">Automação</span>
+                </div>
+                <span class="project-status">Placeholder</span>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-glow" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle me-1"></i>Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
