@@ -26,13 +26,13 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Rodar aplicação
-        run: npm run start
+      - name: Fazer build da aplicação
+        run: npm run build
 
-      - name: Gerar pasta public (caso necessário)
+      - name: Gerar pasta public com os arquivos compilados
         run: |
           mkdir -p public
-          cp -r * public/
+          cp -r dist/* public/ 2>/dev/null || cp -r . public/ --exclude=node_modules --exclude=.git --exclude=.github
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
