@@ -779,7 +779,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   text-align: center;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Top shine on hover */
@@ -865,6 +865,53 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   background: rgba(109, 40, 217, 0.22);
   color: #c4b5fd;
   border-color: rgba(109,40,217,0.3);
+}
+
+/* Skill Level Badges */
+.skill-level-badge {
+  position: absolute;
+  top: -17px;
+  right: -8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  border: 2px solid;
+  transition: all var(--ease);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  transform: scale(0.85) rotate(0deg);
+}
+
+.skill-level-badge.badge-starter {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.25), rgba(34, 211, 238, 0.15));
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.skill-level-badge.badge-professional {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.25), rgba(109, 40, 217, 0.15));
+  color: var(--purple-lt);
+  border-color: var(--purple-lt);
+}
+
+.skill-level-badge.badge-expert {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(245, 158, 11, 0.15));
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.skill-card:hover .skill-level-badge {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
 }
 
 /* -------------------------------------------------------------------------- */
