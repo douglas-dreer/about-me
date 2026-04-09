@@ -26,6 +26,7 @@
     initThemeToggle();
     initDownloadCV();
     initBrokenLinkFallback();
+    sorteioLoteria();
   });
 
   // --------------------------------------------------------------------------
@@ -217,11 +218,15 @@
     if (!el) return;
 
     var words = [
-      'Java & Kotlin',
+      'Java',
+      'Kotlin',
       'Spring Boot',
       'Microsserviços',
       'Clean Code',
-      'Arquitetura de Sistemas'
+      'Arquitetura de Sistemas',
+      'Quarkus',
+      'Banco de Dados',
+
     ];
     var wordIdx = 0;
     var charIdx = 0;
@@ -229,6 +234,11 @@
     var typeSpeed = 80;
     var delSpeed = 40;
     var pauseEnd = 1500;
+
+    function randomizeNumber(min = 1, max = 100) {
+      return parseInt(Math.random() * max) + min
+
+    }
 
     function tick() {
       var word = words[wordIdx];
@@ -361,6 +371,20 @@
           window.location.href = './404.html';
         });
     });
+  }
+
+  function sorteioLoteria(
+    min = 1,
+    max = 50,
+    quantidadeSorteio = 10
+  ) {
+   var resultados = new HashMap()
+   var index = 0
+   while (index < quantidadeNumeros) {
+    var numero = parseInt(Math.random * max) + 1
+    resultados.add(numero)
+   }
+   return [...resultados]
   }
 
 

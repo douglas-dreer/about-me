@@ -870,7 +870,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 /* Skill Level Badges */
 .skill-level-badge {
   position: absolute;
-  top: -17px;
+  top: -4px;
   right: -8px;
   display: inline-flex;
   align-items: center;
@@ -909,7 +909,7 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 }
 
 .skill-card:hover .skill-level-badge {
-  transform: scale(1.08) rotate(5deg);
+ 
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
   z-index: 1000000;
 }
