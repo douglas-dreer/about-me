@@ -26,7 +26,6 @@
     initThemeToggle();
     initDownloadCV();
     initBrokenLinkFallback();
-    sorteioLoteria();
   });
 
   // --------------------------------------------------------------------------
@@ -55,7 +54,7 @@
     var toggle = document.querySelector('.navbar-toggler');
     if (!toggle) return;
 
-    var iconBars  = toggle.querySelector('.bi-list');
+    var iconBars = toggle.querySelector('.bi-list');
     var iconClose = toggle.querySelector('.bi-x');
     if (!iconBars || !iconClose) return;
 
@@ -371,20 +370,6 @@
           window.location.href = './404.html';
         });
     });
-  }
-
-  function sorteioLoteria(
-    min = 1,
-    max = 50,
-    quantidadeSorteio = 10
-  ) {
-   var resultados = new HashMap()
-   var index = 0
-   while (index < quantidadeNumeros) {
-    var numero = parseInt(Math.random * max) + 1
-    resultados.add(numero)
-   }
-   return [...resultados]
   }
 
 
