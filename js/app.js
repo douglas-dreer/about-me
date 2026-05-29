@@ -26,6 +26,7 @@
     initThemeToggle();
     initBrokenLinkFallback();
     initTimelineToggle();
+    initKonamiCode();
   });
 
   // --------------------------------------------------------------------------
@@ -412,5 +413,65 @@
     });
   }
 
+
+  // --------------------------------------------------------------------------
+  // Konami Code Easter Egg — MORTAL KOMBAT Toasty!
+  // --------------------------------------------------------------------------
+  function initKonamiCode() {
+    var sequence = [];
+    var konami = [38, 38, 40, 40]; // Up, Up, Down, Down
+
+    window.addEventListener('keydown', function (e) {
+      sequence.push(e.keyCode);
+      if (sequence.length > konami.length) sequence.shift();
+
+      if (sequence.length === konami.length &&
+          sequence.every(function (v, i) { return v === konami[i]; })) {
+        sequence = [];
+        showToasty();
+      }
+    });
+
+    function showToasty() {
+      var existing = document.getElementById('mk-toasty');
+      if (existing) existing.remove();
+
+      var corners = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
+      var corner = corners[Math.floor(Math.random() * corners.length)];
+      var isTop = corner.indexOf('top') === 0;
+      var isLeft = corner.indexOf('left') >= 0;
+
+      var wrapper = document.createElement('div');
+      wrapper.id = 'mk-toasty';
+
+      wrapper.style.cssText =
+        'position:fixed;z-index:9999;pointer-events:none;' +
+        (isTop ? 'top:0;' : 'bottom:0;') +
+        (isLeft ? 'left:0;' : 'right:0;');
+
+      if (isTop) {
+        var flipX = isLeft ? 'scaleX(-1)' : '';
+        wrapper.style.transform = 'scaleY(-1)' + flipX;
+      } else {
+        wrapper.style.transform = isLeft ? 'scaleX(-1)' : '';
+      }
+
+      var img = document.createElement('img');
+      img.src = './asserts/img/toast.png';
+      img.alt = 'Tost!';
+      img.style.cssText =
+        'width:180px;height:auto;display:block;' +
+        'animation:mk-toast-in 0.15s ease-out, mk-toast-out 0.5s ease-in 1s forwards;';
+
+      wrapper.appendChild(img);
+      document.body.appendChild(wrapper);
+
+      var audio = new Audio('./asserts/sound/toast.mp3');
+      audio.volume = 0.5;
+      audio.play().catch(function () {});
+
+      setTimeout(function () { wrapper.remove(); }, 1600);
+    }
+  }
 
 })();
