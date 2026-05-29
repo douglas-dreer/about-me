@@ -9,5 +9,8 @@ module.exports = merge(common, {
     hot: true,
     open: true,
     static: ['./'],
+    historyApiFallback: {
+      index: '/404.html',
+    },
   },
 });

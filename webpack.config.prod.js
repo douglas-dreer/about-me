@@ -15,7 +15,6 @@ module.exports = merge(common, {
         { from: 'asserts/img', to: 'assets/img' },
         { from: 'asserts/curriculo-douglas-dreer.pdf', to: 'assets/pdf/curriculo.pdf' },
         { from: 'css', to: 'css' },
-        { from: 'js/vendor', to: 'js/vendor' },
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },
         { from: 'robots.txt', to: 'robots.txt' },

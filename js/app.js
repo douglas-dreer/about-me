@@ -24,8 +24,8 @@
     initTypedText();
     footerYear();
     initThemeToggle();
-    initDownloadCV();
     initBrokenLinkFallback();
+    initTimelineToggle();
   });
 
   // --------------------------------------------------------------------------
@@ -167,7 +167,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // Contact Form
+  // Contact Form — Web3Forms
   // --------------------------------------------------------------------------
   function initContactForm() {
     var form = document.getElementById('contactForm');
@@ -189,23 +189,51 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Enviando...';
 
-      setTimeout(function () {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalHTML;
+      var formData = new FormData(form);
 
-        if (feedback) {
-          feedback.style.display = 'block';
-          feedback.style.color = '#10b981';
-          feedback.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
-        }
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHTML;
 
-        form.reset();
-        form.classList.remove('was-validated');
+          if (data.success) {
+            if (feedback) {
+              feedback.style.display = 'block';
+              feedback.style.color = '#10b981';
+              feedback.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
+            }
+            form.reset();
+            form.classList.remove('was-validated');
+          } else {
+            if (feedback) {
+              feedback.style.display = 'block';
+              feedback.style.color = '#f43f5e';
+              feedback.textContent = 'Erro ao enviar: ' + (data.message || 'tente novamente mais tarde.');
+            }
+          }
 
-        setTimeout(function () {
-          if (feedback) feedback.style.display = 'none';
-        }, 5000);
-      }, 1500);
+          setTimeout(function () {
+            if (feedback) feedback.style.display = 'none';
+          }, 6000);
+        })
+        .catch(function (err) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHTML;
+
+          if (feedback) {
+            feedback.style.display = 'block';
+            feedback.style.color = '#f43f5e';
+            feedback.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+          }
+
+          setTimeout(function () {
+            if (feedback) feedback.style.display = 'none';
+          }, 6000);
+        });
     });
   }
 
@@ -321,12 +349,24 @@
   }
 
   // --------------------------------------------------------------------------
-  // Init Download CV
+  // Timeline toggle (show older entries)
   // --------------------------------------------------------------------------
-  function initDownloadCV() {
+  function initTimelineToggle() {
+    var btn = document.getElementById('toggleOldTimeline');
+    var oldTimeline = document.getElementById('oldTimeline');
+    var textSpan = document.getElementById('toggleTimelineText');
+    if (!btn || !oldTimeline || !textSpan) return;
 
-    var btn = document.getElementById('downloadCv');
-    if (btn) { btn.addEventListener('click', window.downloadCV); }
+    btn.addEventListener('click', function () {
+      var isHidden = oldTimeline.style.display === 'none';
+      oldTimeline.style.display = isHidden ? 'block' : 'none';
+      textSpan.textContent = isHidden
+        ? 'Ocultar histórico completo'
+        : 'Ver histórico completo (2015 — 2020)';
+      btn.querySelector('i').className = isHidden
+        ? 'bi bi-arrow-up-circle me-1'
+        : 'bi bi-arrow-down-circle me-1';
+    });
   }
 
   // --------------------------------------------------------------------------

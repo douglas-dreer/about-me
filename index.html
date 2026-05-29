@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="pt-BR">
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
@@ -44,12 +44,14 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
         <i class="bi bi-list"></i>
         <i class="bi bi-x d-none"></i>
+        <span class="d-none d-sm-inline d-lg-none ms-1 small text-uppercase" style="font-size:0.7rem; letter-spacing:1px; color:var(--txt-m);">Menu</span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-lg-center gap-lg-1">
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn btn-orange" href="#contato">Fale Comigo</a>
@@ -94,14 +96,13 @@
               <i class="bi bi-download me-1"></i>
               <span class="btn-label">Baixar CV</span>
             </a>
-            <button type="button" id="verProjetos" class="btn btn-glow" aria-label="Ver Projetos" data-bs-toggle="modal"
-              data-bs-target="#modalProjetos">
+            <a href="#projetos" class="btn btn-glow" aria-label="Ver Projetos">
               <i class="bi bi-folder2-open me-1"></i>
               <span class="btn-label">Ver projetos</span>
-            </button>
+            </a>
           </div>
           <div class="hero-socials mt-4 d-flex align-items-center gap-3">
-            <a href="https://gitlab.com/douglasdreer" class="btn btn-glass" target="_blank" rel="noopener"
+            <a href="https://gitlab.com/douglas-dreer" class="btn btn-glass" target="_blank" rel="noopener"
               aria-label="GitLab">
               <i class="bi bi-gitlab fs-5"></i>
             </a>
@@ -109,7 +110,7 @@
               aria-label="LinkedIn">
               <i class="bi bi-linkedin fs-5"></i>
             </a>
-            <a href="mailto:douglasdreer@gmail.com.br" class="btn btn-glass" aria-label="Email">
+            <a href="mailto:douglasdreer@gmail.com" class="btn btn-glass" aria-label="Email">
               <i class="bi bi-envelope-fill fs-5"></i>
             </a>
             <span style="width: 1px; height: 22px; background: rgba(255,255,255,0.08); display: inline-block;"></span>
@@ -120,6 +121,7 @@
         <div class="col-lg-6">
           <div class="hero-logo-wrapper mx-auto">
             <div class="hero-logo-glow"></div>
+            <div class="hero-avatar-ring"></div>
             <img src="./asserts/img/logo.webp" alt="Douglas Dreer" class="hero-logo" loading="eager">
           </div>
         </div>
@@ -137,8 +139,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-5 text-center">
           <div class="about-image-wrapper">
-            <img src="./asserts/img/logo.webp" alt="Douglas Dreer" class="about-image" alt="Workspace Douglas Dreer"
-              class="about-image" loading="lazy">
+            <img src="./asserts/img/logo.webp" alt="Douglas Dreer" class="about-image" loading="lazy">
           </div>
           <div class="experience-badge mt-3">
             <span class="fs-1 fw-bold text-orange d-block">+10</span>
@@ -166,7 +167,7 @@
           </p>
           <ul class="about-highlights list-unstyled d-flex flex-wrap gap-2 mt-4">
             <li class="highlight-item"><i class="bi bi-geo-alt-fill text-orange me-1"></i> Londrina/PR</li>
-            <li class="highlight-item"><i class="bi bi-mortarboard-fill text-orange me-1"></i> ADS — FACCAR (2011)</li>
+            <li class="highlight-item"><a href="https://www.faccar.com.br/graduacao/analise-e-desenvolvimento-de-sistemas-ead/" target="_blank" rel="noopener noreferrer"><i class="bi bi-mortarboard-fill text-orange me-1"></i> ADS — FACCAR (2011)</a></li>
             <li class="highlight-item"><i class="bi bi-translate text-orange me-1"></i> Português — Inglês Intermediário
             </li>
           </ul>
@@ -608,6 +609,7 @@
             </div>
 
             <!-- Atos -->
+            <div id="oldTimeline" style="display: none;">
             <div class="timeline-item fade-in">
               <div class="timeline-marker"></div>
               <div class="timeline-content p-4">
@@ -659,6 +661,92 @@
             </div>
 
           </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <button id="toggleOldTimeline" class="btn btn-glow btn-sm" type="button"
+              style="padding:0.4rem 1.5rem; font-size:0.78rem;">
+              <i class="bi bi-arrow-down-circle me-1"></i>
+              <span id="toggleTimelineText">Ver histórico completo (2015 — 2020)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJETOS ======== -->
+  <section id="projetos" class="section projetos-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-badge">Projetos</span>
+        <h2 class="section-title">Laboratório de Estudos e Homebrews</h2>
+        <p style="color: var(--clr-text-muted); max-width: 600px; margin: 0 auto;">
+          Projetos demonstrativos e experimentais usados para praticar arquitetura, observabilidade e padrões de backend.
+        </p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Supermark Manager Products -->
+        <div class="col-md-6 col-lg-4">
+          <a href="https://gitlab.com/douglas.dreer1/supermarket-manager-product" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none;">
+            <article class="project-placeholder-card h-100">
+              <div class="container-logo">
+                <img loading="lazy" src="./asserts/img/supermarket-manager-product.png" alt="Logo Supermarket Manager" />
+              </div>
+              <h5 class="mb-2">Supermark: Gerenciamento de Produtos</h5>
+              <p class="mb-3">API de gerenciamento de produtos com eventos assíncronos, retries e trilha de auditoria.</p>
+              <div class="project-tags">
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">API Rest</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Hexagonal</span>
+              </div>
+              <span class="project-status">Em desenvolvimento</span>
+            </article>
+          </a>
+        </div>
+        <!-- Supermark Web App-->
+        <div class="col-md-6 col-lg-4">
+          <a href="https://gitlab.com/douglas.dreer1/supermarket-app" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none;">
+            <article class="project-placeholder-card h-100">
+              <div class="container-logo">
+                <img loading="lazy" src="./asserts/img/supermarket-manager-product.png" alt="Logo Supermarket Web" />
+              </div>
+              <h5 class="mb-2">Supermark Web App</h5>
+              <p class="mb-3">Interface gráfica do Supermark construída com NextJS e TypeScript.</p>
+              <div class="project-tags">
+                <span class="skill-tag">ReactJS</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">NextJS</span>
+              </div>
+              <span class="project-status">Em desenvolvimento</span>
+            </article>
+          </a>
+        </div>
+        <!-- Barbershop Server -->
+        <div class="col-md-6 col-lg-4">
+          <a href="https://gitlab.com/douglas.dreer1/barshop-server" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none;">
+            <article class="project-placeholder-card h-100">
+              <div class="container-logo">
+                <img loading="lazy" src="./asserts/img/logo.webp" alt="Logo Barbershop" />
+              </div>
+              <h5 class="mb-2">Barbershop — Server</h5>
+              <p class="mb-3">Gestão de Barbearia com Java 21, Quarkus e KeyCloak.</p>
+              <div class="project-tags">
+                <span class="skill-tag">Java 21</span>
+                <span class="skill-tag">Quarkus</span>
+                <span class="skill-tag">Oracle</span>
+                <span class="skill-tag">KeyCloak</span>
+                <span class="skill-tag">Docker</span>
+              </div>
+              <span class="project-status">Em desenvolvimento</span>
+            </article>
+          </a>
         </div>
       </div>
     </div>
@@ -722,7 +810,10 @@
           </div>
         </div>
         <div class="col-lg-7">
-          <form id="contactForm" class="contact-form p-4 rounded" novalidate>
+          <form id="contactForm" class="contact-form p-4 rounded" novalidate
+            action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="Novo contato do Portfolio - Douglas Dreer">
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="contactName" class="form-label">Nome</label>
@@ -768,7 +859,14 @@
       <div class="footer-content text-center py-5">
         <h3 class="footer-cta mb-4">Vamos conversar?</h3>
 
-        <div class="footer-contact-buttons d-flex justify-content-center gap-3 gap-md-4 flex-wrap mb-4">
+        <div class="footer-contact-buttons d-flex justify-content-center gap-3 flex-wrap mb-4">
+          <a href="https://wa.me/5543996490584" target="_blank" rel="noopener" class="btn btn-orange"
+            style="padding:0.85rem 2.5rem; font-size:1rem;">
+            <i class="bi bi-whatsapp me-2"></i>Falar no WhatsApp
+          </a>
+        </div>
+        <div class="footer-contact-buttons d-flex justify-content-center gap-3 gap-md-4 flex-wrap mb-4"
+          style="font-size:0.85rem;">
           <a href="mailto:douglasdreer@gmail.com" class="footer-contact-btn" aria-label="Email">
             <i class="bi bi-envelope-fill"></i>
             <span>Email</span>
@@ -817,98 +915,8 @@
 
   <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/vendor/generate-pdf.js"></script>
   <script src="js/app.js"></script>
 
-  <div class="modal fade projects-modal" id="modalProjetos" tabindex="-1" aria-labelledby="modalProjetosTitulo"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <div>
-            <span class="section-badge mb-2">Projetos</span>
-            <span class="section-badge mb-2 alert-danger">Públicos</span>
-            <h3 class="modal-title h4 mb-0" id="modalProjetosTitulo">Laboratório de Estudos e Homebrews</h3>
-          </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body pt-0">
-          <p class="projects-modal-intro mb-4">
-            Projetos demonstrativos e experimentais usados para praticar arquitetura, observabilidade e padrões de
-            backend.
-            O conteúdo atual é apenas um placeholder para o futuro.
-          </p>
-          <div class="row g-3">
-            <!-- Supermark Manager Products -->
-            <div class="col-md-6 col-xl-4">
-              <a href="https://gitlab.com/douglas.dreer1/supermarket-manager-product" target="_blank" rel="noopener noreferrer">
-                <article class="project-placeholder-card h-100">
-                  <div class="container-logo">
-                    <img src="./asserts/img/supermarket-manager-product.png" alt="Logo do Projeto" />
-                  </div>
-                  <h5 class="mb-2">Supermark: Gerenciamento de Produtos</h5>
-                  <p class="mb-3">API de gerenciamento de produtos com eventos assíncronos, retries e trilha de
-                    auditoria.
-                  </p>
-                  <div class="project-tags">
-                    <span class="skill-tag">Kotlin</span>
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Api Rest</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Hexagonal</span>
-                  </div>
-                  <span class="project-status">Em desenvolvimento</span>
-                </article>
-              </a>
-            </div>
-            <!-- Supermark Web App-->
-            <div class="col-md-6 col-xl-4">
-              <a href="https://gitlab.com/douglas.dreer1/supermarket-app" target="_blank" rel="noopener noreferrer">
-                <article class="project-placeholder-card h-100">
-                  <div class="container-logo">
-                    <img src="./asserts/img/supermarket-manager-product.png" alt="Logo do Projeto" />
-                  </div>
-                  <h5 class="mb-2">Supermark Web App</h5>
-                  <p class="mb-3">Interface gráfica do Supermark</p>
-                  <div class="project-tags">
-                    <span class="skill-tag">ReactJS</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">NextJS</span>
-                  </div>
-                  <span class="project-status">Em desenvolvimento</span>
-                </article>
-              </a>
-            </div>
-            <!-- Barbershop Server -->
-            <div class="col-md-6 col-xl-4">
-              <a href="https://gitlab.com/douglas.dreer1/barshop-server"  target="_blank" rel="noopener noreferrer">
-                <article class="project-placeholder-card h-100">
-                  <div class="container-logo">
-                    <img src="./asserts/img/logo.webp" alt="Logo do Projeto" />
-                  </div>
-                  <h5 class="mb-2">Barbershop - Server</h5>
-                  <p class="mb-3">Gestão de Barbearia</p>
-                  <div class="project-tags">
-                    <span class="skill-tag">Java 21</span>
-                    <span class="skill-tag">Quarkus</span>
-                    <span class="skill-tag">Oracle</span>
-                    <span class="skill-tag">KeyCloak</span>
-                    <span class="skill-tag">Docker</span>
-                  </div>
-                  <span class="project-status">Em desenvolvimento</span>
-                </article>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer border-0 pt-0">
-          <button type="button" class="btn btn-glow" data-bs-dismiss="modal">
-            <i class="bi bi-x-circle me-1"></i>Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
