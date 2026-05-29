@@ -6,3 +6,9 @@ dist
 .cache
 .claude
 .idea
+docs
+
+## Crush ##
+.crush
+.crushrc
+
