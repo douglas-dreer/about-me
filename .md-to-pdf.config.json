@@ -1,4 +1,10 @@
 {
+  "launch_options": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
   "stylesheet": "css/curriculo-pdf.css",
   "pdf_options": {
     "format": "A4",
