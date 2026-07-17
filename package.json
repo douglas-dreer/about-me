@@ -19,8 +19,9 @@
   "scripts": {
     "test": "exit 0",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build:pdf": "md-to-pdf curriculo.md --config-file .md-to-pdf.config.json && move /Y curriculo.pdf asserts\\curriculo-douglas-dreer.pdf",
+    "build:pdf": "md-to-pdf curriculo.md --config-file .md-to-pdf.config.json && mv curriculo.pdf asserts/curriculo-douglas-dreer.pdf"
     "build": "npm run build:pdf && webpack --config webpack.config.prod.js"
+    
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
