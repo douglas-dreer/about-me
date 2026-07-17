@@ -11,9 +11,9 @@ module.exports = merge(common, {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'asserts', to: 'asserts' },
-        { from: 'asserts/img', to: 'assets/img' },
-        { from: 'asserts/curriculo-douglas-dreer.pdf', to: 'assets/pdf/curriculo.pdf' },
+        { from: 'assets', to: 'assets' },
+        { from: 'assets/img', to: 'assets/img' },
+        { from: 'assets/curriculo-douglas-dreer.pdf', to: 'assets/pdf/curriculo.pdf' },
         { from: 'css', to: 'css' },
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },

@@ -457,7 +457,7 @@
       }
 
       var img = document.createElement('img');
-      img.src = './asserts/img/toast.png';
+      img.src = './assets/img/toast.png';
       img.alt = 'Tost!';
       img.style.cssText =
         'width:180px;height:auto;display:block;' +
@@ -466,7 +466,7 @@
       wrapper.appendChild(img);
       document.body.appendChild(wrapper);
 
-      var audio = new Audio('./asserts/sound/toast.mp3');
+      var audio = new Audio('./assets/sound/toast.mp3');
       audio.volume = 0.5;
       audio.play().catch(function () {});
 

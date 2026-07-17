@@ -7,8 +7,8 @@ pages:
   script:
     - mkdir -p public
     - cp -r index.html css/ js/ 404.html icon.svg icon.png favicon.ico robots.txt site.webmanifest public/
-    - cp -r asserts public/assets
-    - cp -r asserts public/asserts
+    - cp -r assets public/assets
+    - cp -r assets public/assets
   artifacts:
     paths:
       - public
