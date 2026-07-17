@@ -14,18 +14,22 @@ Desenvolvedor Sênior com mais de 10 anos de experiência em backend, especialis
 
 ## Experiência Profissional
 
-### EngeSoft — SIREX | *Jan 2026 — Atual*
-**Desenvolvedor Sênior** (Projeto Caixa)
+### EngeSoftware Tecnologia S/A (EngeSoft — SIREX) | *Jan 2026 — Atual*
+**Analista Desenvolvedor Plataforma Baixa / Desenvolvedor Sênior** (Projeto Caixa)
 
 - Responsável pela migração tecnológica de **jBoss → Quarkus**
 - Desenvolvedor líder da API **sirex-agenda-api**
 - Definição de padrões técnicos e arquitetura do projeto
 - Implementação e padronização de testes automatizados (unitários e integração)
+- Desenvolvedor Angular do projeto FRONT-END citado acima (Angular 19)
+- Desenvolvedor de sustentabilidade do projetos legados SIREX
+- Responsável por migração de banco de dados MS SQL SERVER → ORACLE
+- Criação de script em python para análise e/ou automação e migração de dados
 
-**Tags:** Quarkus, Java, jBoss, Testes Automatizados, Maven
+**Tags:** Quarkus, Java, jBoss, Testes Automatizados, Maven, Oracle, SQL SERVER, Angular, Python
 
-### Picpay | *Jul 2025 — Jan 2026*
-**Desenvolvedor Sênior** (Remoto)
+### PicPay Instituição de Pagamento S/A | *Jul 2025 — Nov 2025*
+**Desenvolvedor SR** (Remoto)
 
 - Desenvolvimento e manutenção de microsserviços para plataforma de Crédito e Recebíveis
 - Atuação em módulos de gestão de contrato, agendamento e opt-in de clientes
@@ -35,23 +39,33 @@ Desenvolvedor Sênior com mais de 10 anos de experiência em backend, especialis
 
 **Tags:** Kotlin, Java, Spring Boot, Docker, Kubernetes, ArgoCD, Kafka, MongoDB, PostgreSQL, AWS
 
-### Consultor / Desenvolvedor Java Sênior (PJ) | *Fev 2022 — Jan 2025*
-**Múltiplos Clientes**
-
+### Desenvolvedor Java Sênior / Múltiplos Clientes | *Mar 2022 — Jan 2025*
 **GlobalWeb — Alocado no FIES** (Jun 2022 — Jan 2025)
 - Manutenção e evolução de sistemas legados (Java, jBoss, Oracle) para o FIES
 
-**ACT Digital — Alocado no Sicoob** (Fev 2022 — Fev 2023)
+**Stefanini Consultoria — Alocado na Cielo** (Mai 2023 — Fev 2024)
+- Desenvolvimento de microsserviços (Spring Boot) para o projeto "Estruturante Cadastro"
+
+**ACT Consultoria em Tecnologia (ACT Digital) — Alocado no Sicoob** (Jun 2022 — Abr 2023)
 - Implementação de processamento assíncrono com Kafka
 - Desenvolvimento de microsserviços com Java e Spring Boot
 
-**Stefanini — Alocado na Cielo** (Mar 2022 — Set 2022)
-- Desenvolvimento de microsserviços (Spring Boot) para o projeto "Estruturante Cadastro"
-
 **Tags:** Java, Spring Boot, Kafka, jBoss, Oracle, Microsserviços
 
-### Atos S/A — Londrina/PR | *Fev 2017 — Mai 2020*
-**Desenvolvedor Java Pleno / Sênior**
+### TTY2000 Tecnologia e Sistemas Ltda | *Jun 2021 — Fev 2022*
+**Analista Desenvolvedor Senior XI**
+
+- *(Atividades a detalhar: inclua os projetos e tecnologias utilizadas)*
+
+### Tata Consultancy Services do Brasil (TCS) | *Ago 2020 — Jun 2021*
+**Analista Desenvolvedor Senior**
+
+- Projeto OpenFinance API
+
+**Tags:** Java, Springboot, API, OPENFINCE, SQL SERVER
+
+### Atos Brasil Ltda — Londrina/PR | *Out 2017 — Ago 2020*
+**Analista Desenv Sistemas I / Desenvolvedor Sênior**
 
 - Liderança na modernização de sistemas internos migrando para Spring Boot
 - Implementação de cultura de qualidade com JUnit e SonarQube
